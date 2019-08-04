@@ -6,21 +6,21 @@ const domain = 'http://localhost:3001'
 
 class App extends PureComponent {
   state = {
-    teams: []
+    players: []
   }
 
   componentDidMount() {
-    fetch(`${domain}/teams`)
+    fetch(`${domain}/players`)
       .then(response => {
         return response.json();
       })
-      .then(teams => {
-        this.setState({ teams })
+      .then(players => {
+        this.setState({ players })
       });
   }
 
   render() {
-    const { teams } = this.state
+    const { players } = this.state
 
     return <div className="App">
       <header className="App-heading App-flex">
