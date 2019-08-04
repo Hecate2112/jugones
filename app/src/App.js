@@ -34,14 +34,14 @@ class App extends PureComponent {
           y una lista con sus nombres. 
           ** Los comentarios de los ejercicios no los borres.
         */}
-        <h3>Los equipos:</h3>
-        <ul>
+        <h3>Los jugadores:</h3>
+        <ul className="App-players">
           {/* 
             TODO ejercicio 3
             Vamos a pasar a darle diseño. Crea el diseño propuesto en el readme con los requerimientos que se necesite.
             Guiate por las imágenes.
            */}
-          {teams.map(team => <li key={team.id}>{team.name}</li>)}
+          {players.map((player, index) => <li key={index} >{player.name}</li>)}
         </ul>
       </div>
       <div className="App-instructions App-flex">
