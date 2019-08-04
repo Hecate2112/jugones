@@ -220,7 +220,29 @@ app.get('/players', function (req, res) {
   // ]
   // TIP: familiarizate primero con los objetos de los equipos: var madrid, barcelona y atletico.
   // TIP2: asegurate que position no es el código de la posición, si no el string
-  res.json({})
+  
+    const madridTeam = madrid.players.map(player => ({
+    name: player.name,
+    position: POSITIONS_STRING[player.position],
+    img: player.img ? player.img : player.url,
+    teamId: madrid.id
+  }));
+
+  const barcelonaTeam = barcelona.players.map(player => ({
+    name: player.name,
+    position: POSITIONS_STRING[player.position],
+    img: player.img ? player.img : player.url,
+    teamId: barcelona.id
+  }));
+
+  const atleticoTeam = atletico.players.map(player => ({
+    name: player.name,
+    position: POSITIONS_STRING[player.position],
+    img: atleticoImages[player.id],
+    teamId: atletico.id
+  }));
+
+  res.json([...madridTeam, ...barcelonaTeam, ...atleticoTeam]);
 });
 
 app.get('/pichichis', function (req, res) {
