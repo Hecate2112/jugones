@@ -50,3 +50,9 @@
 .App-teams {
   flex-direction: column;
 }
+
+.App-players {
+  display:flex;
+  flex-direction: column;
+  text-align: left;
+}
