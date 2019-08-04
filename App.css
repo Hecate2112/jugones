@@ -51,8 +51,64 @@
   flex-direction: column;
 }
 
+
+
+
+
+/*Ejercicio 2 */
 .App-players {
   display:flex;
   flex-direction: column;
   text-align: left;
+}
+
+
+/*Ejercicio 3 */
+.App-player-container{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;;
+  flex-direction: row;
+  min-width: 100%;
+  margin-left: 10%;
+  position: relative;
+}
+
+.App-player-card{
+  display:flex;
+  flex-direction: column;
+  border: 1px solid #c1bfbf;
+  border-radius: 10px;
+  min-width: 280px;
+  max-width: 100px;
+  margin: 10px;
+}
+
+.App-team-shield{
+  width: 28px;
+  margin-left: 89%;
+}
+
+.App-team-player{
+  display:flex;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  justify-content: center;
+  margin-left: 11%;
+}
+
+.App-player-name{
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.App-player-position{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.App-player-team{
+  font-size: 15px;
+  margin-top: 0;
 }
